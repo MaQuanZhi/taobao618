@@ -127,8 +127,8 @@ function browseFinish() {
     for (let i = 0; i < 10; i++) {
         let normalFinishDesc = descContains("已获得").findOnce();
         let normalFinishText = textContains("已获得").findOnce();
-        let swipeFinishDesc = descContains("任务完成").findOnce();
-        let swipeFinishText = textContains("任务完成").findOnce();
+        let swipeFinishDesc = descContains("完成").findOnce();
+        let swipeFinishText = textContains("完成").findOnce();
 
         if (normalFinishDesc != null || swipeFinishDesc != null || normalFinishText != null || swipeFinishText != null) {
             console.log("浏览结束");
@@ -333,19 +333,6 @@ function backToBefore() {
     }
 }
 
-function removeFile(fileName) {
-    if (files.exists(fileName)) {
-        files.remove(fileName);
-    }
-}
-
-function clearNewScript() {
-    threads.start(function () {
-        removeFile("/sdcard/脚本/淘宝喵币/script.js");
-        removeFile("/sdcard/脚本/淘宝喵币/version.txt");
-        toastLog("清除完成");
-    });
-}
 
 function runRun() {
     sleep(500);
@@ -355,26 +342,6 @@ function runRun() {
     alert("结束");
 }
 
-function moveFloating(n) {
-    let i = -1;
-    dialogs.confirm("由于需要，请将悬浮窗移动至靠左。", "点击确认表示已完成，直接运行脚本。\n点击取消则手动前去调整。\n", function (clear) {
-        if (clear) {
-            console.log("直接运行");
-            i = 1;
-        } else {
-            toastLog("请将悬浮窗移动至靠左");
-            i = 0;
-        }
-    });
-
-
-    while (i === -1) {
-        slepp(100);
-    }
-    if (i === 1) {
-        runRun(n);
-    }
-}
 
 function oldVersionWarning(v) {
     let items = ["依旧尝试继续", "清除本地下载的新脚本，使用默认脚本", "新APP"];
