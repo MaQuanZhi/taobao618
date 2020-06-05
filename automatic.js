@@ -21,6 +21,7 @@ function to618() {
 		log("无法进入活动界面，脚本结束！");
 		sleep(1000);
 		console.hide();
+		exit();
 		return -1;
 	}
 }
@@ -43,8 +44,8 @@ if (to618() == 1) {
 			log("点击去浏览");
 			textContains("去浏览").findOne().click();
 			log("开始浏览");
-			// 随机延时25-30秒，如果没有浏览成功便返回可以增加
-			sleep(1000 * random(25, 30));
+			sleep(15000);
+			textContains("完成").findOne(15000);
 			log("结束浏览，返回");
 			back();
 			textContains("关闭").click();
@@ -54,6 +55,7 @@ if (to618() == 1) {
 			log("脚本结束");
 			sleep(1000);
 			console.hide();
+			exit();
 			break;
 		}
 	}

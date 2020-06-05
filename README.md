@@ -9,6 +9,12 @@
 3. 在aotu.js中添加automatic.js文件
 4. 运行脚本automatic.js
 
+# 京东618叠蛋糕 自动版
+1. 打开auto.js
+2. 开启无障碍模式
+3. 在aotu.js中添加jd618.js文件
+4. 运行脚本jd618.js
+
 # 淘宝618列车 手动版
 1. 打开auto.js
 2. 开启无障碍模式，开启悬浮窗
