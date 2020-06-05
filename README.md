@@ -7,14 +7,14 @@
 1. 打开auto.js
 2. 开启无障碍模式
 3. 在aotu.js中添加automatic.js文件
-4. 运行脚本自动版.js
+4. 运行脚本automatic.js
 
 # 淘宝618列车 手动版
 1. 打开auto.js
 2. 开启无障碍模式，开启悬浮窗
 3. 在aotu.js中添加manual.js文件
 4. 淘宝打开喵币领取界面
-5. 通过悬浮窗运行脚本手动版.js
+5. 通过悬浮窗运行脚本manual.js
 
 
 
