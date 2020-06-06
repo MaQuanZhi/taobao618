@@ -21,23 +21,23 @@ sleep(1000);
 
 var i = 0;
 while (1) {
-    var button = textContains("去完成").findOnce(i);
-    if (button != null) {
-        var p = button.parent().parent().parent();
-        var t = p.child(0).child(1).text();
-        if (t.search("8秒") != -1) {
-            button.click();
-            log("点击去完成");
-            sleep(8000);
-            textContains("恭喜完成").findOne(8000);
-            back();
-            log("返回");
-            sleep(2000);
-            i = 0;
-        } else i++;
-    } else {
-        log("结束");
-        console.hide();
-        exit();
-    }
+	var button = textContains("去完成").findOnce(i);
+	if (button != null) {
+		var p = button.parent().parent().parent();
+		var t = p.child(0).child(1).text();
+		if (t.search("8秒") != -1) {
+			button.click();
+			log("点击去完成");
+			sleep(8000);
+			textContains("恭喜完成").findOne(8000);
+			back();
+			log("返回");
+			sleep(2000);
+			i = 0;
+		} else i++;
+	} else {
+		log("结束");
+		console.hide();
+		exit();
+	}
 }
